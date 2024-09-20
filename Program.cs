@@ -1,15 +1,14 @@
+//1.Host Creation
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-
+//2.Service Registration
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+//3.Middleware Setup
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -22,4 +21,10 @@ app.UseAuthorization();
 
 app.MapControllers();
 
+//4.App Run
 app.Run();
+
+//NOTE: The appsettings.json us loadede here during host creation
+//Configuration values from appsettings.json can be injected into
+//services and used to configure different parts of the application
+//Database, connections, feature toggles, etc.
