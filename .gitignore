@@ -7,6 +7,12 @@
 *.user
 *.userosscache
 *.sln.docstates
+*.v2
+*.v2vsidx
+*.dgpec.json
+*.AssemblyInfo.cs
+*.cache
+*.editorconfig
 
 # User-specific files (Mono auto generated)
 mono_crash.*
