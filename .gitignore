@@ -8,11 +8,18 @@
 *.userosscache
 *.sln.docstates
 *.v2
+*.vsidx
 *.v2vsidx
 *.dgpec.json
 *.AssemblyInfo.cs
 *.cache
 *.editorconfig
+*.nuget.cache
+*.assets.json
+*.AssemblyReference.cache
+*.AssemblyInfoInputs.cache
+*.targets
+*.props
 
 # User-specific files (Mono auto generated)
 mono_crash.*
