@@ -1,3 +1,6 @@
+using CodePulse.API.Data;
+using Microsoft.EntityFrameworkCore;
+
 //1.Host Creation
 var builder = WebApplication.CreateBuilder(args);
 
@@ -5,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<ApplicationDBContext>(options => {
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CodePulseConnectionString"));
+});
 
 var app = builder.Build();
 
